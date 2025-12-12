@@ -177,8 +177,8 @@ Distribué sous licence MIT. Voir le fichier `LICENSE` pour plus d'informations.
 ## 👨‍💻 **Auteur**
 
 **Votre Nom**
-- GitHub: [@votre-username](https://github.com/votre-username)
-- Site Web: votre-site.com
+- GitHub: [@A2B78](https://github.com/A2B78)
+- Site Web: ***Coming-soon***
 
 ## ⭐ **Support**
 
