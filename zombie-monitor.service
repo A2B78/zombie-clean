@@ -1,0 +1,11 @@
+[Unit]
+Description=Zombie Process Monitor
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/zombie_monitor.sh --check
+User=root
+
+[Install]
+WantedBy=multi-user.target
