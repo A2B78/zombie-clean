@@ -1,0 +1,41 @@
+# ======================================================
+# PipelineAI - Generated docker-compose.yml
+# Stack: unknown (unknown)
+# ======================================================
+
+version: '3.9'
+
+services:
+  app:
+    image: ${IMAGE_NAME:-zombie-clean:latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: zombie-clean
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+
+
+    depends_on:
+
+
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - zombie-clean-network
+
+networks:
+  zombie-clean-network:
+    driver: bridge
+
+volumes:
+  app_data:
